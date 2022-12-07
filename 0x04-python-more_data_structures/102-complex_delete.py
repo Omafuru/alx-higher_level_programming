@@ -1,4 +1,10 @@
 #!/usr/bin/python3
-def square_matrix_simple(matrix=[]):
-    new_matrix = [[x ** 2 for x in row] for row in matrix]
-    return new_matrix
+def complex_delete(a_dictionary, value):
+    """Delete keys with a specific value in a dictionary."""
+    while value in a_dictionary.values():
+        for k, v in a_dictionary.items():
+            if v == value:
+                del a_dictionary[k]
+                break
+
+    return (a_dictionary)
